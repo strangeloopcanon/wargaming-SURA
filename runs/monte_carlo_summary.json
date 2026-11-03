@@ -1,0 +1,397 @@
+{
+  "initial_t0_calibration": {
+    "S": {
+      "leader": "Aegis Frontier Labs",
+      "us_lead_over_prc_months": 8.0,
+      "aegis_lead_over_apex_months": 2.7,
+      "open_weight_eci": 151.0,
+      "p_global_pause_plan_a": 6.8,
+      "p_plan_c_coalition": 17.4,
+      "p_pure_race_plan_d": 75.8,
+      "p_survival_if_plan_a": 83.5,
+      "p_survival_if_plan_c": 52.4,
+      "p_survival_if_plan_d": 29.0,
+      "expected_human_survival_pct": 36.8
+    },
+    "M": {
+      "leader": "Aegis Frontier Labs",
+      "us_lead_over_prc_months": 8.0,
+      "aegis_lead_over_apex_months": 2.7,
+      "open_weight_eci": 152.0,
+      "p_global_pause_plan_a": 5.2,
+      "p_plan_c_coalition": 17.7,
+      "p_pure_race_plan_d": 77.1,
+      "p_survival_if_plan_a": 81.5,
+      "p_survival_if_plan_c": 21.8,
+      "p_survival_if_plan_d": 9.0,
+      "expected_human_survival_pct": 15.1
+    },
+    "R": {
+      "leader": "Aegis Frontier Labs",
+      "us_lead_over_prc_months": 3.3,
+      "aegis_lead_over_apex_months": 0.7,
+      "open_weight_eci": 157.0,
+      "p_global_pause_plan_a": 3.6,
+      "p_plan_c_coalition": 18.0,
+      "p_pure_race_plan_d": 78.3,
+      "p_survival_if_plan_a": 75.5,
+      "p_survival_if_plan_c": 38.0,
+      "p_survival_if_plan_d": 19.8,
+      "expected_human_survival_pct": 25.1
+    }
+  },
+  "archetype_policy_grid": {
+    "S": {
+      "cooperative_treaty": {
+        "n_seeds": 300,
+        "mean_survival_pct": 59.3,
+        "p10_survival_pct": 30.6,
+        "median_survival_pct": 71.5,
+        "p90_survival_pct": 84.0,
+        "schemer_turn_share_pct": 13.1,
+        "regime_distribution_pct": {
+          "PLAN_A_FRAGILE_EXECUTIVE_PAUSE": 51.0,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 44.7,
+          "PLAN_A_RATIFIED_TREATY_IN_FORCE": 2.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 2.0
+        },
+        "phase2_distribution_pct": {
+          "TENUOUS ARMS-CONTROL STANDOFF": 50.7,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 35.7,
+          "CORPORATE TECHNO-OLIGARCHY": 10.0,
+          "INSTITUTIONALIZED COMPUTE NON-PROLIFERATION": 2.3,
+          "CONSTITUTIONAL PLURALIST COMMONS": 1.0,
+          "SURVEILLANCE COMPUTE LEVIATHAN": 0.3
+        }
+      },
+      "adaptive_portfolio_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 7.6,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 9.0,
+        "p90_survival_pct": 11.2,
+        "schemer_turn_share_pct": 40.0,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 91.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 5.3,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 3.3
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 99.7,
+          "SECURITIZED EXECUTIVE SUPREMACY": 0.3
+        }
+      },
+      "doctrinaire_sura_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 8.0,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 9.0,
+        "p90_survival_pct": 11.3,
+        "schemer_turn_share_pct": 39.7,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 90.7,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 4.7,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 3.0,
+          "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 1.0,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 0.7
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 100.0
+        }
+      },
+      "securitized_great_power_race": {
+        "n_seeds": 300,
+        "mean_survival_pct": 7.1,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 8.1,
+        "p90_survival_pct": 13.8,
+        "schemer_turn_share_pct": 40.4,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 100.0
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 92.7,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 7.3
+        }
+      },
+      "lead_burn_attempt": {
+        "n_seeds": 300,
+        "mean_survival_pct": 33.7,
+        "p10_survival_pct": 15.4,
+        "median_survival_pct": 38.9,
+        "p90_survival_pct": 48.5,
+        "schemer_turn_share_pct": 22.2,
+        "regime_distribution_pct": {
+          "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 61.3,
+          "SECURITIZED_NATIONALIST_RACE": 23.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 15.3
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 90.0,
+          "SECURITIZED EXECUTIVE SUPREMACY": 7.0,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 3.0
+        }
+      }
+    },
+    "M": {
+      "cooperative_treaty": {
+        "n_seeds": 300,
+        "mean_survival_pct": 41.6,
+        "p10_survival_pct": 1.9,
+        "median_survival_pct": 67.0,
+        "p90_survival_pct": 79.0,
+        "schemer_turn_share_pct": 79.9,
+        "regime_distribution_pct": {
+          "PLAN_A_FRAGILE_EXECUTIVE_PAUSE": 51.0,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 42.3,
+          "PLAN_A_RATIFIED_TREATY_IN_FORCE": 3.3,
+          "SECURITIZED_NATIONALIST_RACE": 2.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 1.0
+        },
+        "phase2_distribution_pct": {
+          "TENUOUS ARMS-CONTROL STANDOFF": 36.0,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 33.7,
+          "SURVEILLANCE COMPUTE LEVIATHAN": 15.3,
+          "CORPORATE TECHNO-OLIGARCHY": 12.0,
+          "INSTITUTIONALIZED COMPUTE NON-PROLIFERATION": 3.0
+        }
+      },
+      "adaptive_portfolio_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 1.2,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.0,
+        "p90_survival_pct": 1.0,
+        "schemer_turn_share_pct": 91.0,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 89.7,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 5.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 5.0
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 99.7,
+          "SECURITIZED EXECUTIVE SUPREMACY": 0.3
+        }
+      },
+      "doctrinaire_sura_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 1.3,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.0,
+        "p90_survival_pct": 1.0,
+        "schemer_turn_share_pct": 90.5,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 88.7,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 5.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 4.3,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 1.0,
+          "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 0.7
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 99.7,
+          "SECURITIZED EXECUTIVE SUPREMACY": 0.3
+        }
+      },
+      "securitized_great_power_race": {
+        "n_seeds": 300,
+        "mean_survival_pct": 1.0,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.0,
+        "p90_survival_pct": 1.0,
+        "schemer_turn_share_pct": 93.5,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 100.0
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 92.0,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 8.0
+        }
+      },
+      "lead_burn_attempt": {
+        "n_seeds": 300,
+        "mean_survival_pct": 9.0,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 10.5,
+        "p90_survival_pct": 16.0,
+        "schemer_turn_share_pct": 84.4,
+        "regime_distribution_pct": {
+          "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 59.7,
+          "SECURITIZED_NATIONALIST_RACE": 22.3,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 18.0
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 89.0,
+          "SECURITIZED EXECUTIVE SUPREMACY": 7.0,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 4.0
+        }
+      }
+    },
+    "R": {
+      "cooperative_treaty": {
+        "n_seeds": 300,
+        "mean_survival_pct": 16.2,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 8.6,
+        "p90_survival_pct": 55.5,
+        "schemer_turn_share_pct": 51.9,
+        "regime_distribution_pct": {
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 72.3,
+          "SECURITIZED_NATIONALIST_RACE": 17.7,
+          "PLAN_A_FRAGILE_EXECUTIVE_PAUSE": 10.0
+        },
+        "phase2_distribution_pct": {
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 65.3,
+          "CORPORATE TECHNO-OLIGARCHY": 24.3,
+          "SURVEILLANCE COMPUTE LEVIATHAN": 5.7,
+          "TENUOUS ARMS-CONTROL STANDOFF": 4.3,
+          "CONSTITUTIONAL PLURALIST COMMONS": 0.3
+        }
+      },
+      "adaptive_portfolio_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 2.1,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.8,
+        "p90_survival_pct": 3.3,
+        "schemer_turn_share_pct": 82.6,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 88.0,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 6.7,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 5.3
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 100.0
+        }
+      },
+      "doctrinaire_sura_realistic": {
+        "n_seeds": 300,
+        "mean_survival_pct": 2.4,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.8,
+        "p90_survival_pct": 3.7,
+        "schemer_turn_share_pct": 82.7,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 86.7,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 6.3,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 5.7,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 1.3
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 98.7,
+          "SOVEREIGN PARTY-STATE HEGEMONY": 1.3
+        }
+      },
+      "securitized_great_power_race": {
+        "n_seeds": 300,
+        "mean_survival_pct": 1.5,
+        "p10_survival_pct": 1.0,
+        "median_survival_pct": 1.0,
+        "p90_survival_pct": 2.8,
+        "schemer_turn_share_pct": 84.2,
+        "regime_distribution_pct": {
+          "SECURITIZED_NATIONALIST_RACE": 100.0
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 96.7,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 3.3
+        }
+      },
+      "lead_burn_attempt": {
+        "n_seeds": 300,
+        "mean_survival_pct": 15.6,
+        "p10_survival_pct": 3.5,
+        "median_survival_pct": 8.1,
+        "p90_survival_pct": 30.3,
+        "schemer_turn_share_pct": 66.9,
+        "regime_distribution_pct": {
+          "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 44.0,
+          "PLAN_D_UNCOORDINATED_PURE_RACE": 31.7,
+          "SECURITIZED_NATIONALIST_RACE": 22.7,
+          "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 1.0,
+          "PLAN_C_LAB_LED_TRANSITION": 0.3,
+          "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 0.3
+        },
+        "phase2_distribution_pct": {
+          "CORPORATE TECHNO-OLIGARCHY": 88.7,
+          "MANAGED PUBLIC-PRIVATE DIRECTORATE": 6.0,
+          "SECURITIZED EXECUTIVE SUPREMACY": 5.0,
+          "SOVEREIGN PARTY-STATE HEGEMONY": 0.3
+        }
+      }
+    }
+  },
+  "parameter_sensitivity_tornado": [
+    {
+      "parameter": "Scheming Onset Hazard Slope",
+      "pessimistic_survival_adaptive": 3.3,
+      "optimistic_survival_adaptive": 13.2,
+      "survival_swing_pts": 9.9,
+      "adaptive_minus_doctrinaire_at_lo": -2.0,
+      "adaptive_minus_doctrinaire_at_hi": -1.7
+    },
+    {
+      "parameter": "Base Alignment Feasibility (p_surv_c_base)",
+      "pessimistic_survival_adaptive": 5.6,
+      "optimistic_survival_adaptive": 11.1,
+      "survival_swing_pts": 5.5,
+      "adaptive_minus_doctrinaire_at_lo": -1.7,
+      "adaptive_minus_doctrinaire_at_hi": -2.0
+    },
+    {
+      "parameter": "DPA Judicial Injunction Probability",
+      "pessimistic_survival_adaptive": 10.0,
+      "optimistic_survival_adaptive": 11.3,
+      "survival_swing_pts": 1.3,
+      "adaptive_minus_doctrinaire_at_lo": -0.4,
+      "adaptive_minus_doctrinaire_at_hi": -2.3
+    },
+    {
+      "parameter": "Alignment Return Near Brink (brink_mult)",
+      "pessimistic_survival_adaptive": 10.2,
+      "optimistic_survival_adaptive": 11.4,
+      "survival_swing_pts": 1.2,
+      "adaptive_minus_doctrinaire_at_lo": -1.9,
+      "adaptive_minus_doctrinaire_at_hi": -1.9
+    },
+    {
+      "parameter": "Lab Financial / Capex Burn Pressure",
+      "pessimistic_survival_adaptive": 11.9,
+      "optimistic_survival_adaptive": 10.9,
+      "survival_swing_pts": 1.0,
+      "adaptive_minus_doctrinaire_at_lo": -1.2,
+      "adaptive_minus_doctrinaire_at_hi": -2.0
+    },
+    {
+      "parameter": "PRC Response to US Lead (Refuse Inferiority vs Tie)",
+      "pessimistic_survival_adaptive": 10.6,
+      "optimistic_survival_adaptive": 11.1,
+      "survival_swing_pts": 0.5,
+      "adaptive_minus_doctrinaire_at_lo": -1.0,
+      "adaptive_minus_doctrinaire_at_hi": -1.9
+    },
+    {
+      "parameter": "Warning Shot Political Sign (Race vs Pause)",
+      "pessimistic_survival_adaptive": 10.8,
+      "optimistic_survival_adaptive": 11.1,
+      "survival_swing_pts": 0.3,
+      "adaptive_minus_doctrinaire_at_lo": -0.7,
+      "adaptive_minus_doctrinaire_at_hi": -2.0
+    },
+    {
+      "parameter": "Open-Weight Lag (5m Fast vs 15m Slow)",
+      "pessimistic_survival_adaptive": 11.1,
+      "optimistic_survival_adaptive": 11.1,
+      "survival_swing_pts": 0.0,
+      "adaptive_minus_doctrinaire_at_lo": -1.7,
+      "adaptive_minus_doctrinaire_at_hi": -1.9
+    },
+    {
+      "parameter": "US Senate Ratification Hurdle",
+      "pessimistic_survival_adaptive": 11.1,
+      "optimistic_survival_adaptive": 11.1,
+      "survival_swing_pts": 0.0,
+      "adaptive_minus_doctrinaire_at_lo": -1.8,
+      "adaptive_minus_doctrinaire_at_hi": -1.9
+    }
+  ]
+}

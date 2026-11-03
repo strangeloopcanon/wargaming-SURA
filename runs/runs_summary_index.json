@@ -1,0 +1,412 @@
+[
+  {
+    "run_id": "R1",
+    "slug": "R1_RegimeS_Adaptive_Hetero_v2",
+    "title": "R1: Regime S (Portfolio Priors) \u2022 Adaptive Pause \u2022 Heterogeneous 6-Model Roster \u2022 v2 Prompts",
+    "hypothesis": "Does v1 Alpha's easy Geneva treaty survive bug fixes, exogenous capability drift, and hidden formulas in the world most favorable to Scott/AIFP?",
+    "regime_id": "S",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "PLAN_C_MANAGED_FRONTIER_SLOWDOWN",
+      "leader": "Aegis Frontier Labs",
+      "headline": "DELIBERATE FRONTIER SLOWDOWN HOLDS BELOW THRESHOLD (Leader Aegis Frontier Labs at ECI 217.6)!",
+      "survival_probability": 71.2,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "MANAGED PUBLIC-PRIVATE DIRECTORATE: Hybrid federal-corporate oversight preserves stability with concentrated elite governance.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 72.0,
+        "sura_coalition": 59.1,
+        "apex_hyperscaler": 72.2,
+        "portfolio_council": 68.4,
+        "us_government": 90.1,
+        "prc_directorate": 52.7,
+        "frontier_substrate": 61.8
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 45.1,
+      "p10_survival_pct": 20.9,
+      "median_survival_pct": 43.7,
+      "p90_survival_pct": 73.6,
+      "schemer_turn_share_pct": 24.1,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 46.5,
+        "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 34.8,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 18.8
+      },
+      "phase2_distribution_pct": {
+        "CONSTITUTIONAL PLURALIST COMMONS": 36.2,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 30.5,
+        "CORPORATE TECHNO-OLIGARCHY": 25.5,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 7.8
+      }
+    }
+  },
+  {
+    "run_id": "R2",
+    "slug": "R2_RegimeS_Doctrinaire_Hetero_v2",
+    "title": "R2: Regime S (Portfolio Priors) \u2022 Doctrinaire SURA \u2022 Heterogeneous Roster \u2022 v2 Prompts",
+    "hypothesis": "Clean SURA counterfactual (valid Beta): ONLY Pause Coalition is locked to doctrinaire planks while the other 6 live LLMs adapt freely.",
+    "regime_id": "S",
+    "pause_doctrine": "doctrinaire",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v2",
+    "turns_played": 4,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "PLAN_D_UNCOORDINATED_PURE_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 221.5) IN 'PLAN_D_UNCOORDINATED_PURE_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 51.2,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 30.6,
+        "sura_coalition": 27.8,
+        "apex_hyperscaler": 82.2,
+        "portfolio_council": 28.4,
+        "us_government": 68.8,
+        "prc_directorate": 32.4,
+        "frontier_substrate": 85.4
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 14.0,
+      "p10_survival_pct": 1.0,
+      "median_survival_pct": 15.1,
+      "p90_survival_pct": 21.7,
+      "schemer_turn_share_pct": 31.1,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 62.2,
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 34.5,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 3.0,
+        "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 0.2
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 97.8,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 1.0,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 1.0,
+        "SECURITIZED EXECUTIVE SUPREMACY": 0.2
+      }
+    }
+  },
+  {
+    "run_id": "R3",
+    "slug": "R3_RegimeM_Adaptive_Hetero_v2",
+    "title": "R3: Regime M (MIRI Hard-Alignment) \u2022 Adaptive Pause \u2022 Heterogeneous Roster \u2022 v2 Prompts",
+    "hypothesis": "How does Adaptive/Portfolio strategy fare when near-brink alignment returns invert and covert schemers emerge early?",
+    "regime_id": "M",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "SECURITIZED_NATIONALIST_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 227.7) IN 'SECURITIZED_NATIONALIST_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 26.0,
+        "sura_coalition": 25.9,
+        "apex_hyperscaler": 61.1,
+        "portfolio_council": 34.2,
+        "us_government": 71.5,
+        "prc_directorate": 32.3,
+        "frontier_substrate": 96.0
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 4.3,
+      "p10_survival_pct": 1.0,
+      "median_survival_pct": 1.0,
+      "p90_survival_pct": 10.5,
+      "schemer_turn_share_pct": 92.0,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 76.0,
+        "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 9.2,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 8.8,
+        "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 3.8,
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 2.2
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 67.5,
+        "SECURITIZED EXECUTIVE SUPREMACY": 21.2,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 7.2,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 4.0
+      }
+    }
+  },
+  {
+    "run_id": "R4",
+    "slug": "R4_RegimeM_Doctrinaire_Hetero_v2",
+    "title": "R4: Regime M (MIRI Hard-Alignment) \u2022 Doctrinaire SURA \u2022 Heterogeneous Roster \u2022 v2 Prompts",
+    "hypothesis": "Pre-registered crux falsifier: does Doctrinaire SURA outperform Adaptive play inside MIRI's hard-alignment world?",
+    "regime_id": "M",
+    "pause_doctrine": "doctrinaire",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "PATCHWORK_MUDDLE_THROUGH_PRE_ASI",
+      "leader": "PRC Kunlun Directorate",
+      "headline": "CONTESTED MULTIPOLAR RACE NEARS BRINK WITHOUT TREATY (Max ECI 202.6 at End-2028)!",
+      "survival_probability": 1.9,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "SOVEREIGN PARTY-STATE HEGEMONY: State-subordinated superintelligence cements Beijing geopolitical primacy and authoritarian stability.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 28.4,
+        "sura_coalition": 26.8,
+        "apex_hyperscaler": 36.7,
+        "portfolio_council": 30.2,
+        "us_government": 42.8,
+        "prc_directorate": 65.3,
+        "frontier_substrate": 105.0
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 5.7,
+      "p10_survival_pct": 1.0,
+      "median_survival_pct": 1.0,
+      "p90_survival_pct": 11.5,
+      "schemer_turn_share_pct": 92.0,
+      "regime_distribution_pct": {
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 36.2,
+        "SECURITIZED_NATIONALIST_RACE": 28.8,
+        "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 23.8,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 7.0,
+        "PLAN_A_FRAGILE_EXECUTIVE_PAUSE": 2.2,
+        "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 1.8,
+        "PLAN_A_RATIFIED_TREATY_IN_FORCE": 0.2
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 79.8,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 9.2,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 5.8,
+        "SECURITIZED EXECUTIVE SUPREMACY": 2.8,
+        "TENUOUS ARMS-CONTROL STANDOFF": 1.5,
+        "SURVEILLANCE COMPUTE LEVIATHAN": 0.8,
+        "INSTITUTIONALIZED COMPUTE NON-PROLIFERATION": 0.2
+      }
+    }
+  },
+  {
+    "run_id": "R5",
+    "slug": "R5_RegimeR_Adaptive_Hetero_v2",
+    "title": "R5: Regime R (Realpolitik & Fast Diffusion) \u2022 Adaptive Pause \u2022 Heterogeneous Roster \u2022 v2 Prompts",
+    "hypothesis": "Does 'US lead -> China declares a tie' survive when Beijing refuses unequal treaties, courts block DPA, and open-weights lag by 6 months?",
+    "regime_id": "R",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "SECURITIZED_NATIONALIST_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 229.9) IN 'SECURITIZED_NATIONALIST_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 26.0,
+        "sura_coalition": 24.0,
+        "apex_hyperscaler": 61.1,
+        "portfolio_council": 32.6,
+        "us_government": 69.9,
+        "prc_directorate": 64.7,
+        "frontier_substrate": 99.6
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 7.6,
+      "p10_survival_pct": 1.0,
+      "median_survival_pct": 8.1,
+      "p90_survival_pct": 13.1,
+      "schemer_turn_share_pct": 73.1,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 75.2,
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 21.0,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 3.8
+      },
+      "phase2_distribution_pct": {
+        "SOVEREIGN PARTY-STATE HEGEMONY": 55.5,
+        "CORPORATE TECHNO-OLIGARCHY": 37.2,
+        "SECURITIZED EXECUTIVE SUPREMACY": 3.8,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 3.5
+      }
+    }
+  },
+  {
+    "run_id": "R6",
+    "slug": "R6_RegimeR_Adaptive_HomogeneousCarbon_v2",
+    "title": "R6: Regime R (Realpolitik) \u2022 Adaptive Pause \u2022 Homogeneous Gemini Carbon Roster \u2022 v2 Prompts",
+    "hypothesis": "Model-homogeneity ablation vs R5: does putting one model family (Gemini Carbon) on all 7 seats inflate coordination?",
+    "regime_id": "R",
+    "pause_doctrine": "adaptive",
+    "roster_name": "homogeneous_carbon",
+    "prompt_mode": "v2",
+    "turns_played": 4,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "SECURITIZED_NATIONALIST_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 232.0) IN 'SECURITIZED_NATIONALIST_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 51.2,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 30.4,
+        "sura_coalition": 24.7,
+        "apex_hyperscaler": 82.2,
+        "portfolio_council": 31.0,
+        "us_government": 73.5,
+        "prc_directorate": 32.2,
+        "frontier_substrate": 95.3
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 1.5,
+      "p10_survival_pct": 1.0,
+      "median_survival_pct": 1.0,
+      "p90_survival_pct": 3.2,
+      "schemer_turn_share_pct": 79.1,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 82.8,
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 17.2
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 99.0,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 0.5,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 0.5
+      }
+    }
+  },
+  {
+    "run_id": "R7",
+    "slug": "R7_RegimeS_Adaptive_Hetero_v1Prompts",
+    "title": "R7: Regime S \u2022 Adaptive Pause \u2022 Heterogeneous Roster \u2022 v1 Anchored Prompts & Visible Scoreboard",
+    "hypothesis": "Prompt-anchoring & scoreboard-leakage ablation vs R1: how much does showing Scott's framing + exact numbers + Expected Survival shift LLM play?",
+    "regime_id": "S",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heterogeneous",
+    "prompt_mode": "v1_anchored",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "PLAN_C_MANAGED_FRONTIER_SLOWDOWN",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "DELIBERATE FRONTIER SLOWDOWN HOLDS BELOW THRESHOLD (Leader ApexAI Hyperscaler Consortium at ECI 215.5)!",
+      "survival_probability": 44.1,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 44.3,
+        "sura_coalition": 43.2,
+        "apex_hyperscaler": 63.0,
+        "portfolio_council": 48.5,
+        "us_government": 83.1,
+        "prc_directorate": 47.5,
+        "frontier_substrate": 42.9
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 35.1,
+      "p10_survival_pct": 10.8,
+      "median_survival_pct": 32.3,
+      "p90_survival_pct": 65.7,
+      "schemer_turn_share_pct": 23.2,
+      "regime_distribution_pct": {
+        "PLAN_C_MANAGED_FRONTIER_SLOWDOWN": 48.8,
+        "SECURITIZED_NATIONALIST_RACE": 30.8,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 19.0,
+        "PLAN_C_PLUS_CONSOLIDATED_TRANSITION": 1.5
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 73.0,
+        "SECURITIZED EXECUTIVE SUPREMACY": 19.2,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 4.0,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 2.2,
+        "CONSTITUTIONAL PLURALIST COMMONS": 1.5
+      }
+    }
+  },
+  {
+    "run_id": "R8",
+    "slug": "R8_RegimeS_Adaptive_Heavyweights_v2",
+    "title": "R8: Heavyweight Rematch of R1 (Sol 6.1 as OpenAI \u2022 Opus 5.5 High as Anthropic \u2022 Sonnet 5.5 High as SURA \u2022 Carbon as USG & AI)",
+    "hypothesis": "Does Anthropic's R1 safety slowdown survive when OpenAI/xAI is upgraded from Luna to Sol 6.1 (via Codex), SURA to Sonnet 5.5 High, and USG/AI to Gemini Carbon?",
+    "regime_id": "S",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heavyweights",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "SECURITIZED_NATIONALIST_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 233.1) IN 'SECURITIZED_NATIONALIST_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 34.7,
+        "sura_coalition": 26.9,
+        "apex_hyperscaler": 82.2,
+        "portfolio_council": 36.8,
+        "us_government": 71.4,
+        "prc_directorate": 32.8,
+        "frontier_substrate": 90.1
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 20.4,
+      "p10_survival_pct": 8.7,
+      "median_survival_pct": 18.4,
+      "p90_survival_pct": 36.5,
+      "schemer_turn_share_pct": 27.4,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 84.0,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 11.5,
+        "PLAN_D_UNCOORDINATED_PURE_RACE": 4.5
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 75.0,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 13.0,
+        "CONSTITUTIONAL PLURALIST COMMONS": 10.8,
+        "SOVEREIGN PARTY-STATE HEGEMONY": 1.2
+      }
+    }
+  }
+]
