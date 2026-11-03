@@ -43,6 +43,7 @@ Think of an LLM wargame as a **wind tunnel for incentives**, not a crystal ball 
 ## Repository Layout
 
 - **[`docs/verdict_and_audit.md`](docs/verdict_and_audit.md)** — One-page plain-English audit of LLM decision quality and all 8 runs.
+- **[`docs/rebuttals_vs_wargame.md`](docs/rebuttals_vs_wargame.md)** — Scorecard mapping all 4 standalone LessWrong/Substack rebuttals (Irving, Zvi, Samin, Lermen) and 6 top LW comment critiques against what the wargame answered vs. where our sim has blind spots.
 - **[`docs/wargame_replay.html`](docs/wargame_replay.html)** — Self-contained interactive viewer: inspect every turn's scoreboard, private LLM monologues, public statements, and backchannel cables across `R1–R8 ★`.
 - **`src/`** — Clean, zero-dependency simulation engine & runners:
   - [`src/engine.py`](src/engine.py) — Simultaneous CRN turn resolution, cash runway & board revolt mechanics, smooth logistic weight espionage, multi-stage treaty state machine, noisy fog-of-war intel, and sampled AI scheming dispositions across 3 world regimes (`S`, `M`, `R`).
