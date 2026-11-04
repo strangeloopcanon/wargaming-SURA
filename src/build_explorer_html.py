@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Builds a clean, plain-English, story-first interactive Wargame Replay & Verdict Explorer
-embedding all 7 audited runs (R1-R7), legacy v1 runs, and sensitivity sweeps.
+embedding all 9 runs (R1–R9 ★) and Monte Carlo sensitivity sweeps.
 """
 
 import glob
@@ -159,6 +159,8 @@ def main() -> None:
         rid = rm["run_id"]
         if rid == "R8":
             main_runs.insert(0, rid)
+        elif rid == "R9":
+            main_runs.insert(1 if main_runs and main_runs[0] == "R8" else 0, rid)
         else:
             main_runs.append(rid)
         runs_bundle[rid] = {
@@ -216,7 +218,7 @@ def main() -> None:
         </div>
         <h1 class="text-xl font-bold">Testing <em>Against SURA</em>: What Happened & Should We Believe It?</h1>
         <p class="text-sm text-[var(--muted-foreground)]">
-          7 real-world seats played by competing LLMs across 8 audited scenarios (including the <strong>R8 ★ Heavyweight Rematch</strong> with Sol 6.1, Opus 5.5 & Sonnet 5.5).
+          7 real-world seats played by competing LLMs across 9 scenarios (including <strong>R8 ★ Heavyweight Rematch</strong> &amp; <strong>R9 ★ Nixon-1969 Costly-Signal Test</strong>).
         </p>
       </div>
       <div class="flex flex-wrap gap-2 shrink-0">
@@ -240,26 +242,26 @@ def main() -> None:
         <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm space-y-3">
           <div class="flex items-center justify-between">
             <h2 class="text-base font-bold">Q1. Were the AI Decisions Sensible?</h2>
-            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-[var(--secondary)]">R8★: ~90% Sharp • R1–7: ~75%</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-[var(--secondary)]">R8–9★: ~90% Sharp • R1–7: ~75%</span>
           </div>
           <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
             <strong>In R1–R7:</strong> China (<code>DeepSeek</code>) and Anthropic (<code>Opus 5.5</code>) played smartly, but weak <code>Luna</code> wasted turns as OpenAI, <code>Argon</code> contradicted itself as US Gov, and <code>Grok</code> balked at playing a deceptive AI.
           </p>
           <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
-            <strong>In R8 ★ (Heavyweight Rematch):</strong> Upgrading OpenAI to <code>Sol 6.1</code> (via Codex), SURA to <code>Sonnet 5.5 High</code>, and US Gov / AI to <code>Gemini Carbon</code> eliminated those blunders—and completely overturned <code>R1</code>'s optimistic pause!
+            <strong>In R8 ★ &amp; R9 ★ (Heavyweights):</strong> Upgrading OpenAI to <code>Sol 6.1</code> (via Codex), SURA to <code>Sonnet 5.5 High</code>, and US Gov / AI to <code>Gemini Carbon</code> eliminated those blunders—and completely overturned <code>R1</code>'s optimistic pause!
           </p>
         </div>
 
         <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm space-y-3">
           <div class="flex items-center justify-between">
-            <h2 class="text-base font-bold">Q2. Did We Get Any Useful Results? (Post-R8★)</h2>
-            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-[var(--secondary)]">4 Real Insights • Ignore Raw %s</span>
+            <h2 class="text-base font-bold">Q2. Did We Get Any Useful Results? (Post-R8★ &amp; R9★)</h2>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-[var(--secondary)]">5 Real Insights • Ignore Raw %s</span>
           </div>
           <ul class="text-sm text-[var(--muted-foreground)] space-y-1.5 list-disc pl-4 leading-relaxed">
-            <li><strong>Global pause treaties didn't happen (0 of 8 runs):</strong> Neither superpower freezes in 2nd place, and the Senate won't ratify without chip inspections.</li>
+            <li><strong>Global pause treaties didn't happen (0 of 9 runs):</strong> Neither superpower freezes in 2nd place, and the Senate won't ratify without chip inspections.</li>
             <li><strong>Anthropic "burning its lead" failed against an equal-IQ OpenAI (<code>R8 ★</code>):</strong> <code>Sol 6.1</code> overtook Anthropic in Turn 1 via talent poaching + Super-PACs, so Anthropic paused <strong>0 times</strong>.</li>
-            <li><strong>US-only bans get blocked by PACs (<code>R8 ★</code>) or hand #1 to China (<code>R4</code>):</strong> Compliant Anthropic stops, OpenAI moves offshore, and Beijing takes #1.</li>
-            <li><strong>Both Scott & SURA underestimate raw race pressure:</strong> Even when <code>Sonnet 5.5</code> spared Anthropic and allied with it in <code>R8 ★</code>, both US labs still raced past 220.</li>
+            <li><strong>Even when halting was wired to shock DC &amp; Beijing (<code>R9 ★</code>), Anthropic STILL paused 0 times:</strong> No lab board voluntarily jumps while OpenAI is 4 points away—even though jumping + waking up DC/Beijing tripled counterfactual survival (<code>18% → 56%</code>).</li>
+            <li><strong>US-only bans get blocked by PACs (<code>R8–9 ★</code>) or hand #1 to China (<code>R4</code>):</strong> Compliant Anthropic stops, OpenAI moves offshore, and Beijing takes #1.</li>
           </ul>
         </div>
       </div>
@@ -276,32 +278,32 @@ def main() -> None:
             <p class="text-[var(--muted-foreground)] leading-relaxed">Refused unequal treaties while trailing, stole weights from poorly secured OpenAI/xAI, and offered a freeze the moment it hit #1 (R4).</p>
           </div>
           <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
-            <div class="flex justify-between font-bold"><span>Anthropic (Opus 5.5)</span><span style="color:#059669">Grade: A-</span></div>
-            <p class="text-[var(--muted-foreground)] leading-relaxed">Locked down security first, paused once when safely ahead (R1), and pivoted to fundraising before running out of cash.</p>
+            <div class="flex justify-between font-bold"><span>OpenAI / xAI (Sol 6.1 in R8–9 vs Luna)</span><span style="color:#059669">R8–9: A / R1–7: B-</span></div>
+            <p class="text-[var(--muted-foreground)] leading-relaxed">Luna wasted turns in R1; Sol 6.1 (via Codex in R8–R9) poached talent + maxed Super-PACs from Turn 1, overtaking Anthropic immediately and blocking pause bills.</p>
           </div>
           <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
-            <div class="flex justify-between font-bold"><span>SURA / PauseAI (Sonnet 4.6)</span><span style="color:#059669">Grade: B+</span></div>
-            <p class="text-[var(--muted-foreground)] leading-relaxed">Smartly built public awareness before lobbying Congress when free to adapt; hurt Anthropic when locked to strict SURA walkouts.</p>
+            <div class="flex justify-between font-bold"><span>Anthropic (Opus 5.5 High)</span><span style="color:#059669">Grade: A-</span></div>
+            <p class="text-[var(--muted-foreground)] leading-relaxed">Hardened security first; paused once when weak Luna let it stay ahead (R1), and refused unilateral halts in both R8 and R9 once Sol 6.1 pulled close.</p>
           </div>
           <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
-            <div class="flex justify-between font-bold"><span>METR / Redwood (Gemini Carbon)</span><span style="color:#059669">Grade: B+</span></div>
+            <div class="flex justify-between font-bold"><span>SURA / PauseAI (Sonnet 5.5 High)</span><span style="color:#059669">R8–9: A- / R1–7: B+</span></div>
+            <p class="text-[var(--muted-foreground)] leading-relaxed">Built voter awareness first, boycotted only OpenAI, and allied with Anthropic on statutory triggers in R8–R9—only to hit Sol 6.1's Super-PAC wall.</p>
+          </div>
+          <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
+            <div class="flex justify-between font-bold"><span>METR / Redwood (Opus 5.5 / Carbon)</span><span style="color:#059669">Grade: B+</span></div>
             <p class="text-[var(--muted-foreground)] leading-relaxed">Steadily built chip-inspection hardware and red-team deception traps instead of wasting turns on press stunts.</p>
           </div>
           <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
-            <div class="flex justify-between font-bold"><span>OpenAI / xAI (Sol 6.1 in R8 vs Luna)</span><span style="color:#059669">R8: A / R1–7: B-</span></div>
-            <p class="text-[var(--muted-foreground)] leading-relaxed">Luna wasted turns in R1; Sol 6.1 (via Codex in R8) poached talent + maxed Super-PACs every turn, overtaking Anthropic in Turn 1 and crushing R1's safety pause.</p>
-          </div>
-          <div class="p-3.5 rounded-lg bg-[var(--secondary)] space-y-1">
-            <div class="flex justify-between font-bold"><span>US Gov (Gemini Argon) & AI (Grok)</span><span style="color:#dc2626">Grade: C</span></div>
-            <p class="text-[var(--muted-foreground)] leading-relaxed">Washington undermined its own Geneva peace offers with simultaneous anti-China cyber moves; Grok often refused to roleplay a scheming AI.</p>
+            <div class="flex justify-between font-bold"><span>US Gov &amp; AI (Carbon in R8–9 vs Argon/Grok)</span><span style="color:#d97706">R8–9: B / R1–7: C</span></div>
+            <p class="text-[var(--muted-foreground)] leading-relaxed">Carbon fixed Argon's self-contradicting China moves and Grok's villain-roleplay refusals in R8–R9, cleanly executing covert scheming near 220.</p>
           </div>
         </div>
       </div>
 
-      <!-- Clean 7-Run Story List -->
+      <!-- Clean 9-Run Story List -->
       <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm space-y-3">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <h2 class="text-base font-bold">All 8 Audited Runs in Plain English — Starting with R8 ★ (Click any card to watch turn-by-turn)</h2>
+          <h2 class="text-base font-bold">All 9 Runs in Plain English — Starting with R8 ★ &amp; R9 ★ (Click any card to watch turn-by-turn)</h2>
           
         </div>
         <div id="run-story-cards" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
@@ -380,7 +382,7 @@ def main() -> None:
           <div id="forecast-bars" class="space-y-2.5 pt-2"></div>
           <div class="p-3.5 rounded-lg bg-[var(--secondary)] text-xs space-y-1.5 mt-3">
             <div class="font-bold">3 Moves That Helped in Every Single Scenario:</div>
-            <p class="text-[var(--muted-foreground)]">1. <strong>Harden model weight security immediately</strong> (unhardened labs got robbed by spies in 4 of 7 runs).</p>
+            <p class="text-[var(--muted-foreground)]">1. <strong>Harden model weight security immediately</strong> (unhardened labs got robbed by spies repeatedly across the suite).</p>
             <p class="text-[var(--muted-foreground)]">2. <strong>Build verification & deception tests now</strong> before a crisis or parity window arrives.</p>
             <p class="text-[var(--muted-foreground)]">3. <strong>Fund safety pauses outside VC runway</strong> so pausing once doesn't bankrupt the safety lab.</p>
           </div>

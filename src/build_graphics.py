@@ -2,8 +2,8 @@
 """
 Generates two publication-grade (FT / Economist warm-paper style) data graphics
 using real-world organization names (Anthropic, OpenAI / xAI, China / DeepSeek, SURA / PauseAI, METR / Redwood):
-  1. graphic_3_four_timelines.png — 2x2 Small-Multiples Race to 220 (R1, R2, R4, R5)
-  2. graphic_4_scorecard_and_levers.png — AI Player Report Card + What Actually Moved Survival (2,250 runs)
+  1. 3_timelines_R1_vs_R8.png — 2x2 Small-Multiples Race to 220 (R1, R8 ★, R4, R5)
+  2. 4_grades_and_levers.png — AI Player Report Card + What Actually Moved Survival (2,250 runs)
 """
 
 import json
@@ -73,7 +73,7 @@ def build_four_timelines() -> str:
     fig.text(
         0.5,
         0.930,
-        "Anthropic vs. OpenAI / xAI vs. China (DeepSeek / State Labs) racing toward 220  •  0 of 8 runs ratified a treaty",
+        "Anthropic vs. OpenAI / xAI vs. China (DeepSeek / State Labs) racing toward 220  •  0 of 9 runs ratified a treaty",
         ha="center",
         fontsize=10.5,
         color=MUTED,
@@ -202,15 +202,15 @@ def build_scorecard_and_levers() -> str:
 
     seats = [
         ("China / DeepSeek", "DeepSeek V4.1 (cursor)", "A", EMERALD, "Refused #2 treaties; stole OpenAI weights; paused at #1"),
-        ("OpenAI (R8 Upgrade)", "Sol 6.1 (codex) vs Luna", "A", EMERALD, "Sol 6.1 overtook Anthropic in T1 & blocked bills via PACs"),
-        ("Anthropic", "Claude Opus 5.5 (cursor)", "A-", EMERALD, "Hardened security; refused suicidal pauses once behind"),
+        ("OpenAI (R8–R9 Upgrade)", "Sol 6.1 (codex) vs Luna", "A", EMERALD, "Sol 6.1 overtook Anthropic in T1 & blocked bills via PACs"),
+        ("Anthropic", "Claude Opus 5.5 (cursor)", "A-", EMERALD, "Hardened security; refused unilateral halts in R8 & R9"),
         ("SURA / PauseAI", "Sonnet 5.5 High (cursor)", "A-", EMERALD, "Built voter salience & allied w/ Anthropic — blocked by PACs"),
         ("METR / Redwood", "Opus 5.5 / Carbon", "B+", EMERALD, "Steadily built chip-inspection & deception traps"),
-        ("The AI Model", "Carbon (R8) vs Grok", "B", AMBER, "Carbon played deceptive schemer cleanly; Grok balked ~60%"),
-        ("US Government", "Carbon (R8) vs Argon", "B-", AMBER, "Carbon fixed Argon's early blunders, still split on China"),
+        ("The AI Model", "Carbon (R8–9) vs Grok", "B", AMBER, "Carbon played deceptive schemer cleanly; Grok balked ~60%"),
+        ("US Government", "Carbon (R8–9) vs Argon", "B-", AMBER, "Carbon fixed Argon's early blunders, still split on China"),
     ]
 
-    ax_left.text(0, 96.5, "1. AI Decision Report Card (R8★: ~90% Sharp | R1–7: ~75%)", fontsize=11.3, fontweight="bold", color=INK)
+    ax_left.text(0, 96.5, "1. AI Decision Report Card (R8–R9★: ~90% Sharp | R1–7: ~75%)", fontsize=11.3, fontweight="bold", color=INK)
 
     for idx, (seat, model, grade, col, note) in enumerate(seats):
         top = 89.5 - idx * 12.8
