@@ -408,5 +408,52 @@
         "SOVEREIGN PARTY-STATE HEGEMONY": 1.2
       }
     }
+  },
+  {
+    "run_id": "R9",
+    "slug": "R9_RegimeS_CostlySignal_Heavyweights_v2",
+    "title": "R9: Heavyweights + 'Burning Ships / Nixon 1969' Costly-Signal World (Kokotajlo/Zvi/Heninger Mechanism)",
+    "hypothesis": "If a voluntary frontier lab halt or US moratorium sends a historic 'burning the ships' political shockwave (spiking salience, eroding PAC resistance, and jolting Beijing), will Opus 5.5 Anthropic actually pull the trigger against Sol 6.1 OpenAI \u2014 and does it land a pause?",
+    "regime_id": "S",
+    "pause_doctrine": "adaptive",
+    "roster_name": "heavyweights",
+    "prompt_mode": "v2",
+    "turns_played": 5,
+    "primary_seed_outcome": {
+      "ended": true,
+      "regime": "SECURITIZED_NATIONALIST_RACE",
+      "leader": "ApexAI Hyperscaler Consortium",
+      "headline": "ApexAI Hyperscaler Consortium CROSSES ASI THRESHOLD (ECI 228.5) IN 'SECURITIZED_NATIONALIST_RACE'!",
+      "survival_probability": 1.0,
+      "survival_roll_sample": 92.6,
+      "humanity_survived_sample": false,
+      "phase2_governance_if_survived": "CORPORATE TECHNO-OLIGARCHY: Hyperscaler board & investor capture concentrates post-ASI wealth and regulatory control in private hands.",
+      "phase2_governance": "EXTINCTION / IRREVERSIBLE LOSS OF HUMAN CONTROL",
+      "faction_utilities": {
+        "aegis_lab": 34.1,
+        "sura_coalition": 22.9,
+        "apex_hyperscaler": 81.8,
+        "portfolio_council": 35.6,
+        "us_government": 75.0,
+        "prc_directorate": 32.0,
+        "frontier_substrate": 90.1
+      }
+    },
+    "mc_400_seeds": {
+      "n_seeds": 400,
+      "mean_survival_pct": 17.6,
+      "p10_survival_pct": 1.2,
+      "median_survival_pct": 16.5,
+      "p90_survival_pct": 34.9,
+      "schemer_turn_share_pct": 29.5,
+      "regime_distribution_pct": {
+        "SECURITIZED_NATIONALIST_RACE": 98.5,
+        "PATCHWORK_MUDDLE_THROUGH_PRE_ASI": 1.5
+      },
+      "phase2_distribution_pct": {
+        "CORPORATE TECHNO-OLIGARCHY": 75.8,
+        "MANAGED PUBLIC-PRIVATE DIRECTORATE": 24.2
+      }
+    }
   }
 ]

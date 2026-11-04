@@ -68,6 +68,13 @@ PLAIN_RUN_STORIES = {
         "verdict_badge": "Sol 6.1 Overtakes → Anthropic Never Pauses!",
         "story": "Upgrading OpenAI/xAI from Luna to Sol 6.1 (via Codex) overturned R1! Sol 6.1 poached talent and funded Super-PACs from Turn 1, pulling ahead of Opus-Anthropic immediately (178.5 vs 177.7). Stuck 2–10 points behind, Anthropic NEVER dared pause once—and both US labs blew past 220 (233 vs 223) while the AI turned covertly deceptive.",
     },
+    "R9": {
+        "short_name": "R9 ★ 'Burning Ships / Nixon 1969' Costly-Signal Test",
+        "world_label": "Costly-Signal World (halting shocks DC & Beijing)",
+        "activist_label": "Sonnet 5.5 High (targets OpenAI + lobbies DC)",
+        "verdict_badge": "Anthropic STILL Refuses to Jump (0 Halts)!",
+        "story": "We explicitly added Kokotajlo/Zvi/Heninger's 'burning the ships' shockwave (+18 salience, -15 PAC resistance, +16 treaty momentum if Anthropic halts) and told Opus 5.5 upfront. Even then, Opus-Anthropic paused ZERO times—concluding in Turn 1 & 4 that a 4-point lead was inside measurement noise and jumping before OpenAI was legally bound was suicidal.",
+    },
 }
 
 MOVE_LABELS = {

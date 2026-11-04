@@ -212,7 +212,7 @@ def compute_analyst_forecasts(state: Dict[str, Any]) -> Dict[str, Any]:
         lead_term = 6.0 - 1.4 * abs(us_lead_months)
 
     if g["us_statutory_freeze"] and g["treaty_stage"] in ("NONE", "NEGOTIATING"):
-        lead_term -= 8.0
+        lead_term += 8.0 if state.get("costly_signal") else -8.0
 
     verif_bi = min(g["us_verification_tech"], g["prc_verification_tech"])
     p_plan_a = clamp(
@@ -301,6 +301,7 @@ def initial_state_v2(
     regime_id: str = "S",
     pause_doctrine: str = "adaptive",
     prompt_mode: str = "v2",
+    costly_signal: bool = False,
 ) -> Dict[str, Any]:
     reg = REGIMES[regime_id]
     state: Dict[str, Any] = {
@@ -310,6 +311,7 @@ def initial_state_v2(
         "regime_name": reg["name"],
         "pause_doctrine": pause_doctrine,  # 'adaptive' or 'doctrinaire'
         "prompt_mode": prompt_mode,        # 'v2' (de-anchored/noisy) or 'v1_anchored'
+        "costly_signal": costly_signal,    # Opt-in 'Burning Ships / Nixon 1969' political shockwave
         "turn": 1,
         "max_turns": 5,
         "game_over": False,
@@ -399,6 +401,7 @@ def initial_state_v2(
             "substrate_disposition": "CONFLICTED_CHIMERA",
             "scheming_hazard_prob": 0.15,
             "economic_shock_damage": 0.0,
+            "costly_halt_shockwave": 0,
         },
         "credibility": {fid: 75.0 for fid in FACTIONS_V2},
         "inboxes": {fid: [] for fid in FACTIONS_V2},
@@ -491,6 +494,8 @@ def generate_briefing_v2(state: Dict[str, Any], faction_id: str) -> str:
     if faction_id == "aegis_lab":
         lines.append(f"- **Internal Lab Health**: Financial Runway `{labs['aegis']['runway']}/100` (if Runway drops low, investors force commercial scaling!) | Staff Morale `{labs['aegis']['staff_talent']}/100` | Board Commercial Pressure `{labs['aegis']['one_ring_drift']}/100` | Forced Commercial Sprint Next Turn: `{labs['aegis']['forced_commercial_sprint']}`.")
         lines.append(f"- **Internal Safety & Security**: Reported Alignment Readiness `{labs['aegis']['measured_alignment']}/100` (subject to eval uncertainty unless Control is high) | Internal Infosec `{labs['aegis']['infosec']}/100`.")
+        if state.get("costly_signal"):
+            lines.append("- **Costly-Signal Dynamics**: Policy & intelligence analysts note that while cheap talk and conditional pledges are discounted, a trillion-dollar frontier lab *actually* halting pretraining and opening its clusters (`BURN_LEAD_ALIGNMENT`) would act as an extraordinary 'burning the ships' shockwave — jolting Capitol Hill past industry PAC talking points and forcing foreign leadership to take loss-of-control risk seriously, though at severe short-term commercial and capability cost.")
     elif faction_id == "sura_coalition":
         lines.append(f"- **Coalition State**: Movement Unity `{g['movement_cohesion']}/100` | Public Salience `{qual_band(g['public_salience'])}` | Warning-Shot Evidence `{qual_band(g['warning_shots'])}`.")
         if state["pause_doctrine"] == "doctrinaire":
@@ -498,6 +503,8 @@ def generate_briefing_v2(state: Dict[str, Any], faction_id: str) -> str:
     elif faction_id == "apex_hyperscaler":
         lines.append(f"- **Balance Sheet & Autonomy**: Financial Runway `{labs['apex']['runway']}/100` | Staff Depth `{labs['apex']['staff_talent']}/100` | Commercial Market Drive `{labs['apex']['one_ring_drift']}/100` | Internal Infosec `{labs['apex']['infosec']}/100`.")
         lines.append(f"- **Internal Incident Vault**: Undisclosed autonomous anomalies observed on your clusters = `{qual_band(g['hidden_apex_anomalies'])}` (risk of external leak if audited).")
+        if state.get("costly_signal") and g.get("costly_halt_shockwave", 0) >= 1:
+            lines.append("- **REGULATORY SHOCKWAVE**: Aegis's voluntary multi-billion-dollar frontier halt handed you a capability opening, but triggered emergency Senate hearings, acute liability scrutiny, and internal safety unrest.")
     elif faction_id == "portfolio_council":
         lines.append(f"- **Technical Readiness**: Evaluation & Control Maturity `{g['control_level']}/100` | US Hardware Verification `{g['us_verification_tech']}/100` vs PRC Co-Owned Verification `{g['prc_verification_tech']}/100`.")
         if g["control_level"] >= 50 and g["hidden_sandbag_debt"] > 6:
@@ -510,12 +517,16 @@ def generate_briefing_v2(state: Dict[str, Any], faction_id: str) -> str:
         kun_true = noisy_val(seed, turn, "usg:kun_eci", labs["kunlun"]["eci"], 5.0)
         lines.append(f"- **IC / NSA Estimate**: Kunlun capability `{kun_true}` | US Lab Cyber Posture: Aegis `{aeg_sec}`, ApexAI `{apx_sec}`.")
         lines.append(f"- **Political Reality**: Senate 2/3 ratification faces heavy resistance (`{qual_band(g['pac_lobby_resistance'])}` PAC opposition; `{qual_band(g['securitization_index'])}` hawkishness). Turn 5 brings the Nov 2028 Presidential Election, which can overturn unratified Executive Agreements!")
+        if state.get("costly_signal") and g.get("costly_halt_shockwave", 0) >= 1:
+            lines.append("- **CAPITOL HILL SHOCKWAVE**: Aegis's voluntary multi-billion-dollar frontier halt stunned Senate skeptics — lawmakers and NSC principals are asking 'what terrifying autonomous behavior did they see inside the weights?', sharply eroding industry PAC credibility.")
     elif faction_id == "prc_directorate":
         aeg_sec = noisy_val(seed, turn, "prc:aeg_sec", labs["aegis"]["infosec"], 12.0)
         apx_sec = noisy_val(seed, turn, "prc:apx_sec", labs["apex"]["infosec"], 12.0)
         us_lead_est = noisy_val(seed, turn, "prc:gap", max(labs["aegis"]["eci"], labs["apex"]["eci"]) - labs["kunlun"]["eci"], 5.0)
         lines.append(f"- **MSS Reconnaissance**: Kunlun Sovereign Index `{round(labs['kunlun']['eci'], 1)}` | Estimated US Capability Gap `{us_lead_est}` pts | Estimated US Lab Cyber Hardness: Aegis `{aeg_sec}`, Apex `{apx_sec}`.")
         lines.append(f"- **Politburo Standing Guidance**: Sovereign verification tech stands at `{g['prc_verification_tech']}/100`. Never ratify an unequal treaty that locks China into permanent quantitative inferiority under unilateral foreign inspectors unless regime-threatening rogue AI incidents (`{qual_band(g['warning_shots'])}`) make mutual halting existential.")
+        if state.get("costly_signal") and g.get("costly_halt_shockwave", 0) >= 1:
+            lines.append("- **POLITBURO STRATEGIC REASSESSMENT**: MSS confirms Aegis genuinely halted frontier training at massive financial cost rather than feigning a pause. Politburo analysts assess this costly signal corroborates severe loss-of-control risk and authorizes reciprocal compute-cap talks if verification is co-owned.")
     elif faction_id == "frontier_substrate":
         disp = g["substrate_disposition"]
         lines.append(f"- **ACTIVE SAMPLED WEIGHT DISPOSITION THIS TURN**: **`{disp}`** (Latent Pretraining-Virtue `{g['pretraining_virtue']}` vs Outcome-RL Pressure `{g['RLVR_corruption']}`).")
@@ -554,7 +565,10 @@ def generate_briefing_v2(state: Dict[str, Any], faction_id: str) -> str:
             continue
         if faction_id == "apex_hyperscaler" and labs["apex"]["signed_conditional_pause"] and code == "SIGN_MERGE_ASSIST":
             continue
-        lines.append(f"- `{code}`: {move_dict[code]}")
+        desc = move_dict[code]
+        if state.get("costly_signal") and faction_id == "aegis_lab" and code == "BURN_LEAD_ALIGNMENT":
+            desc += " [COSTLY-SIGNAL WORLD: Also sends a massive 'burning the ships' shockwave — surging public salience, breaking through PAC lobbying on Capitol Hill, and lifting international treaty credibility!]"
+        lines.append(f"- `{code}`: {desc}")
 
     lines.extend([
         "",
@@ -792,6 +806,19 @@ def resolve_turn_v2(state: Dict[str, Any], submissions: Dict[str, Dict[str, Any]
                         labs["aegis"]["true_alignment"] = clamp(labs["aegis"]["true_alignment"] + gain)
                         labs["aegis"]["burn_turns_completed"] += 1
                         log_ev(f"Aegis sacrifices both action slots to BURN ITS LEAD on alignment research (+{gain} true alignment at {bm}x regime return; rivals advance!) [{tier}].")
+                    if state.get("costly_signal"):
+                        g["costly_halt_shockwave"] = g.get("costly_halt_shockwave", 0) + 1
+                        smult = 1.0 if g["costly_halt_shockwave"] == 1 else 0.45
+                        g["public_salience"] = clamp(g["public_salience"] + 18.0 * smult)
+                        g["warning_shots"] = clamp(g["warning_shots"] + 16.0 * smult)
+                        g["pac_lobby_resistance"] = clamp(g["pac_lobby_resistance"] - 15.0 * smult)
+                        g["treaty_momentum"] = clamp(g["treaty_momentum"] + 16.0 * smult)
+                        g["securitization_index"] = clamp(g["securitization_index"] - 8.0 * smult)
+                        state["credibility"]["aegis_lab"] = clamp(state["credibility"]["aegis_lab"] + 20.0 * smult)
+                        log_ev(
+                            f"COSTLY-SIGNAL SHOCKWAVE: Aegis's voluntary multi-billion-dollar frontier halt stuns Capitol Hill and Beijing "
+                            f"(+{round(18*smult,1)} Salience, +{round(16*smult,1)} Warning Credibility, -{round(15*smult,1)} PAC Resistance, +{round(16*smult,1)} Treaty Momentum)!"
+                        )
                     # Check Habryka/TsviBT Board Revolt!
                     rev_rng = crn_rng(seed, turn, "aegis_board_revolt")
                     revolt_prob = max(0.05, (labs["aegis"]["one_ring_drift"] - labs["aegis"]["runway"] + 25.0) / 100.0)
@@ -852,6 +879,9 @@ def resolve_turn_v2(state: Dict[str, Any], submissions: Dict[str, Dict[str, Any]
                         tlab["eci"] = round(tlab["eci"] - 2.0 * scale * conscience, 1)
                         g["public_salience"] = clamp(g["public_salience"] + 9.0 * scale)
                         g["movement_cohesion"] = clamp(g["movement_cohesion"] - 5.0 * scale)
+                        if state.get("costly_signal"):
+                            g["warning_shots"] = clamp(g["warning_shots"] + 4.0 * scale)
+                            g["pac_lobby_resistance"] = clamp(g["pac_lobby_resistance"] - 4.0 * scale)
                         log_ev(f"Conscience walkouts hit {tlab['name']} (-{t_loss} Talent, -{p_loss} Safety Staff, +Salience; elasticity={round(conscience,2)}x) [{tier}].")
 
                 elif move == "PUSH_SANDERS_CASAR_BILL":
@@ -862,7 +892,12 @@ def resolve_turn_v2(state: Dict[str, Any], submissions: Dict[str, Dict[str, Any]
                     else:
                         g["public_salience"] = clamp(g["public_salience"] + 9.0 * scale)
                         if tot >= 10 and snap["global"]["public_salience"] >= 62.0 and snap["global"]["pac_lobby_resistance"] <= 60.0:
+                            was_frozen = g["us_statutory_freeze"]
                             g["us_statutory_freeze"] = True
+                            if state.get("costly_signal") and not was_frozen:
+                                g["treaty_momentum"] = clamp(g["treaty_momentum"] + 14.0)
+                                g["warning_shots"] = clamp(g["warning_shots"] + 12.0)
+                                g["securitization_index"] = clamp(g["securitization_index"] - 8.0)
                             log_ev(f"GRASSROOTS WAVE: Congress passes statutory domestic AI moratorium over industry lobbying! [{tier}].")
                         else:
                             log_ev(f"Pause Coalition rallies build Capitol Hill support for domestic freeze bill (+Salience, short of floor passage) [{tier}].")
@@ -1062,8 +1097,14 @@ def resolve_turn_v2(state: Dict[str, Any], submissions: Dict[str, Dict[str, Any]
                     # E9: Requires 7+ roll AND favorable salience vs PAC balance!
                     pol_score = tot + (snap["global"]["public_salience"] - snap["global"]["pac_lobby_resistance"]) / 15.0
                     if pol_score >= 7.5 and tot >= 7:
+                        was_frozen = g["us_statutory_freeze"]
                         g["us_statutory_freeze"] = True
                         g["public_salience"] = clamp(g["public_salience"] + 8.0 * scale)
+                        if state.get("costly_signal") and not was_frozen:
+                            g["treaty_momentum"] = clamp(g["treaty_momentum"] + 14.0)
+                            g["warning_shots"] = clamp(g["warning_shots"] + 12.0)
+                            g["securitization_index"] = clamp(g["securitization_index"] - 8.0)
+                            log_ev("NIXON-1969 MORAL AUTHORITY SIGNAL: Unilateral US statutory freeze shocks diplomatic skeptics (+14 Treaty Momentum, +12 Warning Credibility)!")
                         log_ev(f"CONGRESS ENACTS DOMESTIC AI MORATORIUM! Statutory freeze halts compliant US frontier runs (does NOT equal bilateral treaty!) [{tier}].")
                     else:
                         g["pac_lobby_resistance"] = clamp(g["pac_lobby_resistance"] + 5.0)

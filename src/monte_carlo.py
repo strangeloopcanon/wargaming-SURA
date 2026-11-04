@@ -77,6 +77,7 @@ def replay_moves_mc(
     regime_id: str,
     pause_doctrine: str = "adaptive",
     n_seeds: int = 400,
+    costly_signal: bool = False,
 ) -> Dict[str, Any]:
     """Replay a recorded sequence of LLM moves across `n_seeds` seeds to eliminate single-roll noise."""
     surv_probs: List[float] = []
@@ -86,7 +87,12 @@ def replay_moves_mc(
     total_turns = 0
 
     for i in range(n_seeds):
-        st = initial_state_v2(seed=100000 + i * 37, regime_id=regime_id, pause_doctrine=pause_doctrine)
+        st = initial_state_v2(
+            seed=100000 + i * 37,
+            regime_id=regime_id,
+            pause_doctrine=pause_doctrine,
+            costly_signal=costly_signal,
+        )
         step = 0
         while not st["game_over"]:
             subs = move_history[min(step, len(move_history) - 1)]

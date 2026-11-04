@@ -141,6 +141,18 @@ EXPERIMENT_MATRIX: List[Dict[str, Any]] = [
         "prompt_mode": "v2",
         "seed": 20261102,
     },
+    {
+        "run_id": "R9",
+        "slug": "R9_RegimeS_CostlySignal_Heavyweights_v2",
+        "title": "R9: Heavyweights + 'Burning Ships / Nixon 1969' Costly-Signal World (Kokotajlo/Zvi/Heninger Mechanism)",
+        "hypothesis": "If a voluntary frontier lab halt or US moratorium sends a historic 'burning the ships' political shockwave (spiking salience, eroding PAC resistance, and jolting Beijing), will Opus 5.5 Anthropic actually pull the trigger against Sol 6.1 OpenAI — and does it land a pause?",
+        "regime_id": "S",
+        "pause_doctrine": "adaptive",
+        "roster_name": "heavyweights",
+        "prompt_mode": "v2",
+        "costly_signal": True,
+        "seed": 20261102,
+    },
 ]
 
 
@@ -284,6 +296,7 @@ def execute_run(spec: Dict[str, Any]) -> Dict[str, Any]:
         regime_id=spec["regime_id"],
         pause_doctrine=spec["pause_doctrine"],
         prompt_mode=spec["prompt_mode"],
+        costly_signal=spec.get("costly_signal", False),
     )
     state["run_meta"] = {
         **spec,
@@ -340,6 +353,7 @@ def execute_run(spec: Dict[str, Any]) -> Dict[str, Any]:
         regime_id=spec["regime_id"],
         pause_doctrine=spec["pause_doctrine"],
         n_seeds=400,
+        costly_signal=spec.get("costly_signal", False),
     )
     state["open_loop_monte_carlo_400_seeds"] = mc_stats
     state["run_meta"]["elapsed_seconds"] = round(time.time() - t_run_start, 1)
